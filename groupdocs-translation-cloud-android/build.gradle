@@ -1,0 +1,113 @@
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+    id 'signing'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "22.1"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+
+group = 'com.groupdocs'
+version = '22.1'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'groupdocs-translation-cloud-android'
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name = 'groupdocs-translation-cloud-android'
+                description = 'GroupDocs Cloud Translate SDK for Android'
+                url = 'http://www.aspose.com'
+                properties = [
+                        myProp: "value",
+                        "prop.with.dots": "anotherValue"
+                ]
+                licenses {
+                    license {
+                        name = 'MIT'
+                        url = 'https://opensource.org/licenses/mit-license.php'
+                    }
+                }
+                developers {
+                    developer {
+                        name = 'Alena Panyugina'
+                        email = 'alena.panyugina@aspose.com'
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            // change URLs to point to your repos, e.g. http://my.org/repo
+            def releasesRepoUrl = layout.buildDirectory.dir('repos/releases')
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name.equals("lint")) {
+        //this is for speed up build
+        task.enabled = false
+    }
+    if(task.name.contains("Test"))
+    {
+        //this is what you need
+        task.enabled = false
+    }
+}
+
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'io.gsonfire:gson-fire:1.8.4'
+    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.8.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.8.1'
+    implementation 'org.threeten:threetenbp:1.4.3'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.5.0'
+    implementation project(path: ':groupdocs-storage-cloud-android')
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.0'
+}
