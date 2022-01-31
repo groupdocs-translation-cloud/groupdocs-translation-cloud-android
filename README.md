@@ -1,16 +1,22 @@
 # Android SDK for Translating Cloud Documents
 
-[GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation) is Cloud API to translate Word, Excel, PowerPoint, PDF, Markdown files as well as plain text.
+![GitHub](https://img.shields.io/github/license/groupdocs-translation-cloud/groupdocs-translation-cloud-android)
 
-For convenience of our Android customers we introduce a simple SDK used to add translation of Microsoft Word documents, Microsoft Excel workbooks, Microsoft PowerPoint presentations, PDF documents, Markdown files and plain text to your app with merely a few lines of code.
+[Product Page](https://products.groupdocs.cloud/translation/android/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://apireference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-android) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
+
+
+[GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation/) is Cloud API to translate Word, Excel, PowerPoint, PDF, Markdown files as well as plain text.
+
+For the convenience of our Android Users, we introduce a simple SDK that assists to add translation of Microsoft Word documents, Microsoft Excel workbooks, Microsoft PowerPoint presentations, PDF documents, Markdown files, and plain text to your app with merely a few lines of code.
 
 In detail, it's a set of SDKs for document and plain text translation in our Cloud. It supports translation of .doc, .docx, .docm, .xls, .xlsx, .xlsm, .ppt, .pptx, .pptm, .pdf, .md, .txt files. Just pass a specific file or text to the GroupDocs.Translation Cloud API, and it will translate and save translated file in our Cloud or will return translated text.
 
-It is easy to get started with GroupDocs.Translation Cloud, and there is nothing to install. Create an account at GroupDocs Cloud and get your application information, then you are ready to use SDKs
+It is easy to get started with GroupDocs.Translation Cloud and there is nothing to install. Create an account at GroupDocs Cloud and get your application information, then you are ready to use SDKs.
+
 
 ## Cloud Document Translation Features
 
-- Translation of Microsoft Word, Microsoft Excel,, and Microsoft PowerPoint documents
+- Translation of Microsoft Word®, Microsoft Excel®, and Microsoft PowerPoint® documents
 - [19 languages and 42 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes/endnotes, image captions in Word documents
 - Translation of cells, charts, tables, pivot tables in Excel documents
@@ -87,7 +93,7 @@ To translate plain text the following information should be put in the requests 
 
 ## How to use the SDK?
 
-Our API is completely independent of your operating system, database system, or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone, and time-consuming. Therefore, we have provided and support [SDKs](https://github.com/groupdocs-translation-cloud) in many development languages to make it easier to integrate with us.
+Our API is completely independent of your operating system, database system, or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone, and time-consuming. Therefore, we provide and support [SDKs](https://github.com/groupdocs-translation-cloud) in many development languages to make it easier for your Cloud Apps to integrate with us.
 
 ## Quickstart
 
@@ -98,9 +104,9 @@ Make a personal account on [GroupDocs Cloud Dashboard](https://dashboard.groupdo
 ### Structure
 
 This project includes:
-- Android demo application - "/app"
-- Module "translate" - this is SDK located in "[/groupdocs-translate-cloud-android](./groupdocs-translate-cloud-android)". You can integrate it in your application.
-- Module "storage" - "[/groupdocs-storage-cloud-android](.groupdocs-storage-cloud-android)"
+- Android demo application - "[/app](./app)"
+- Module "translate" - this is SDK located in "[/groupdocs-translation-cloud-android](./groupdocs-translation-cloud-android)". You can integrate it in your application.
+- Module "storage" - "[/groupdocs-storage-cloud-android](./groupdocs-storage-cloud-android)"
 
 ### Maven users
 
@@ -124,4 +130,6 @@ Please see [build.gradle](./groupdocs-translate-cloud-android/build.gradle#L75)
 | .NET | Java | Python | Android |
 |---|---|---|---|
 | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-dotnet) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-java) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-android) |
-| [NuGet](https://www.nuget.org/packages/GroupDocs.translation-Cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-translation-cloud) | [PIP](https://pypi.org/project/groupdocs-translation-cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-translation-cloud) |
+| [NuGet](https://www.nuget.org/packages/GroupDocs.translation-Cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-translation-cloud) | [PIP](https://pypi.org/project/groupdocs-translation-cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-translation-cloud-android) |
+
+[Product Page](https://products.groupdocs.cloud/translation/android/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://apireference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-android) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
