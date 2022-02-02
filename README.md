@@ -66,6 +66,8 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 - **en-hu / hu-en** — to translate from English to Hunngarian or from Hungarian to English
 - **en-sv / sv-en** — to translate from English to Swedish or from Swedish to English
 - **en-tr / tr-en** — to translate from English to Turkish or from Turkish to English
+
+--- 
 - **fr-de / de-fr** — to translate from French to German or from German to French
 - **fr-it / it-fr** — to translate from French to Italian or from Italian to French
 -  **fr-ar / ar-fr** — to translate from French to Arabic or from Arabic to French
@@ -97,7 +99,7 @@ Our API is completely independent of your operating system, database system, or 
 
 ## Quickstart
 
-Make a personal account on [GroupDocs Cloud Dashboard](https://dashboard.groupdocs.cloud/#/) and click _Get Keys_. These keys are useful for all GroupDocs Cloud products. If you have any trouble, look at this [detailed manual](https://docs.groupdocs.cloud/total/creating-and-managing-application/).
+Make a personal account on [GroupDocs Cloud Dashboard](https://dashboard.groupdocs.cloud/#/) and click _Get Keys_. These keys are useful for all GroupDocs Cloud products. If you have any trouble, look at this [detailed manual](https://docs.groupdocs.cloud/total/creating-and-managing-application/). Once your keys are received, please follow this [article](https://docs.groupdocs.cloud/translation/quickstart/) to try GroupDocs.Translation Cloud or familiarize with [Developer guide](https://docs.groupdocs.cloud/translation/developer-guide/) for further details.
 
 ## SDK Details
 
@@ -115,7 +117,7 @@ Add this dependency to your project's POM:
 ```xml
 <dependency>
     <groupId>com.groupdocs</groupId>
-    <artifactId>groupdocs-translate-cloud-android</artifactId>
+    <artifactId>groupdocs-translation-cloud-android</artifactId>
     <version>22.1</version>
     <type>pom</type>
 </dependency>
@@ -123,7 +125,7 @@ Add this dependency to your project's POM:
 
 ### Dependencies
 
-Please see [build.gradle](./groupdocs-translate-cloud-android/build.gradle#L75)
+Please see [build.gradle](./groupdocs-translation-cloud-android/build.gradle)
 
 ## GroupDocs.Translation Cloud SDKs in Popular Languages
 
