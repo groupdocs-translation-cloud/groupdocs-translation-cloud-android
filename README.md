@@ -17,7 +17,7 @@ It is easy to get started with GroupDocs.Translation Cloud and there is nothing 
 ## Cloud Document Translation Features
 
 - Translation of Microsoft Word®, Microsoft Excel®, and Microsoft PowerPoint® documents
-- [19 languages and 42 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
+- [28 languages and 60 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes/endnotes, image captions in Word documents
 - Translation of cells, charts, tables, pivot tables in Excel documents
 - Translation of text frames, tables, headers, footers, charts, comments in PowerPoint presentations
@@ -66,6 +66,15 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 - **en-hu / hu-en** — to translate from English to Hunngarian or from Hungarian to English
 - **en-sv / sv-en** — to translate from English to Swedish or from Swedish to English
 - **en-tr / tr-en** — to translate from English to Turkish or from Turkish to English
+- **en-ja / ja-en** — to translate from English to Japanese or from Japanese to English
+- **en-ko / ko-en** — to translate from English to Korean or from Korean to English
+- **en-cs / cs-en** — to translate from English to Czech or from Czech to English
+- **en-fi / fi-en** — to translate from English to Finnish or from Finnish to English
+- **en-ga / ga-en** — to translate from English to Irish or from Irish to English
+- **en-fa / fa-en** — to translate from English to Farsi or from Farsi to English
+- **en-az / az-en** — to translate from English to Azerbaijani or from Azerbaijani to English
+- **en-he / he-en** — to translate from English to Hebrew or from Hebrew to English
+- **en-sk / sk-en** — to translate from English to Slovak or from Slovak to English
 
 --- 
 - **fr-de / de-fr** — to translate from French to German or from German to French
@@ -118,7 +127,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.groupdocs</groupId>
     <artifactId>groupdocs-translation-cloud-android</artifactId>
-    <version>22.1</version>
+    <version>22.2</version>
     <type>pom</type>
 </dependency>
 ```
