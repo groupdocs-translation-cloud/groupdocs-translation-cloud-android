@@ -11,7 +11,7 @@ android {
         minSdk 21
         targetSdk 32
         versionCode 1
-        versionName "22.1"
+        versionName "22.4"
 
     }
 
@@ -33,7 +33,7 @@ android {
 
 
 group = 'com.groupdocs'
-version = '22.2'
+version = '22.4'
 
 publishing {
     publications {
