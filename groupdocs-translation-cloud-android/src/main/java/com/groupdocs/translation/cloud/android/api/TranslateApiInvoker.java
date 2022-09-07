@@ -37,7 +37,7 @@ public interface TranslateApiInvoker {
 
     /**
      * Translate document
-     * @Body name, folder, pair, format, storage, saveFile, savePath
+     * @Body name, folder, pair, format, storage, saveFile, savePath, masters, elements, separator, codeList, frontLists
      * @return Call<ResponseBody>
      */
     @Headers({"Content-Type:application/json"})
