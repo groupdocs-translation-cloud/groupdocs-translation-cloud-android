@@ -1,7 +1,7 @@
 /*
  * --------------------------------------------------------------------------------------------------------------------
- * <copyright company="Aspose" file="TranslateApiInvoker.java">
- *   Copyright (c) 2021 GroupDocs.Translation for Cloud
+ * <copyright company="Aspose" file="TranslateDocumentResponse.java">
+*   Copyright (c) 2020 GroupDocs.Translation for Cloud
  * </copyright>
  * <summary>
  *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,56 +25,38 @@
  * --------------------------------------------------------------------------------------------------------------------
  */
 
+
 package com.groupdocs.translation.cloud.android.api;
 
-import okhttp3.MultipartBody;
-import okhttp3.RequestBody;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.http.*;
 
-public interface TranslateApiInvoker {
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
 
-    /**
-     * Translate document
-     * @Body name, folder, pair, format, storage, saveFile, savePath, masters, elements, separator, codeList, frontLists, optimizePDFfontsize
-     * @return Call<ResponseBody>
-     */
-    @Headers({"Content-Type:application/json"})
-    @POST("translate/document")
-    Call<ResponseBody> TranslateFromDocument(
-            @Body RequestBody userRequest
-    );
+public class ParseHugoResponse implements Serializable {
+    public String status;
+    public String message;
+    public HashMap<Integer, ArrayList<ArrayList<String>>> frontlists;
+    public HashMap<String, HashMap<String, String>> shortcode;
 
+    public ParseHugoResponse(String status, String message, HashMap<Integer, ArrayList<ArrayList<String>>> frontlists,
+                             HashMap<String, HashMap<String, String>> shortcode){
+        this.status = status;
+        this.message = message;
+        this.frontlists = frontlists;
+        this.shortcode = shortcode;
+    }
 
-    /**
-     * Translate plane text
-     * @Body pair and text
-     * @return Call<ResponseBody>
-     */
-    @Headers({"Content-Type:application/json"})
-    @POST("translate/text")
-    Call<ResponseBody> TranslateText(
-            @Body RequestBody userRequest
-    );
+    public static ParseHugoResponse Deserialize(ResponseBody apiResponse) throws IOException {
+        return Deserialize(apiResponse.string());
+    }
 
-    /**
-     * Translate plane text
-     * @return Call<ResponseBody>
-     */
-    @Headers({"Content-Type:application/json"})
-    @GET("translate/hc")
-    Call<ResponseBody> HealthCheck(
-    );
-
-    /**
-     * Parse Hugo document
-     * @Body name, folder, storage
-     * @return Call<ResponseBody>
-     */
-    @Headers({"Content-Type:application/json"})
-    @POST("translation/hugo")
-    Call<ResponseBody> ParseHugoDocument(
-            @Body RequestBody userRequest
-    );
+    public static ParseHugoResponse Deserialize(String jsonString) {
+        Gson gson = new GsonBuilder().create();
+        return gson.fromJson(jsonString, ParseHugoResponse.class);
+    }
 }

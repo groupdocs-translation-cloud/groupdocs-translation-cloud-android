@@ -75,4 +75,15 @@ public class TranslateApi {
         return TranslateTextResponse.Deserialize(answer);
     }
 
+    public static ParseHugoResponse ParseHugo(ParseHugoRequest hugoRequest) throws IOException
+    {
+        String parseHugoRequestJson = gson.toJson(hugoRequest.getUserRequest());
+        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), parseHugoRequestJson);
+        Call<ResponseBody> call = api.ParseHugoDocument(requestBody);
+        Response<ResponseBody> res = call.execute();
+        ResponseBody answer = res.body();
+        assert answer != null;
+        return ParseHugoResponse.Deserialize(answer);
+    }
+
 }

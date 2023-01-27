@@ -143,7 +143,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.groupdocs</groupId>
     <artifactId>groupdocs-translate-cloud-android</artifactId>
-    <version>22.11</version>
+    <version>23.1</version>
     <type>pom</type>
 </dependency>
 ```
