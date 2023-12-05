@@ -1,45 +1,37 @@
 package com.groupdocs.translation.cloud.sdk.android;
 
-import static java.lang.System.out;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.groupdocs.translation.cloud.android.Configuration;
-import com.groupdocs.translation.cloud.android.api.TextInfo;
-import com.groupdocs.translation.cloud.android.api.TranslateApi;
-import com.google.android.material.textfield.TextInputEditText;
-import com.groupdocs.translation.cloud.android.api.TranslateTextRequest;
-import com.groupdocs.translation.cloud.android.api.TranslateTextResponse;
-
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.model.CloudTextResponse;
+import com.groupdocs.model.TextRequest;
+
+import org.openapitools.client.api.TranslationApi;
+
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static ApiClient defaultClient;
+    private static TranslationApi apiInstance;
+
     private void setUpConfig() throws Exception {
-        Configuration.setAPP_SID("XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX");
-        Configuration.setAPI_KEY("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        String basePath = "https://api.groupdocs.cloud/v2.0/translation";
+        String cliendId = "YOUR_CLIENT_ID";
+        String clientSecret = "YOUR_CLIENT_SECRET";
 
-        Configuration.setAuthPath("https://api.groupdocs.cloud/connect/token");
-        Configuration.setBasePath("https://api.groupdocs.cloud/v1.0");
+        defaultClient = new ApiClient(basePath, cliendId, clientSecret, null);
+        apiInstance = new TranslationApi(defaultClient);
 
-        Configuration.setUserAgent("WebKit");
-
-        Configuration.setTestSrcDir("sourceTest");
-        Configuration.setTestDstDir("destTest");
-
-        if (Configuration.getAPI_KEY().isEmpty() || Configuration.getAPP_SID().isEmpty()) {
-            out.println("! Error: Setup AppSID & AppKey in BaseTest Configuration");
-            throw new Exception("Setup AppSID & AppKey in BaseTest Configuration");
-        }
     }
-
-    private static TranslateApi api;
 
     Button mToTranslateBtn;
     TextView mTranslatedTextView;
@@ -75,16 +67,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void translateText(String text)  throws IOException {
-        String pair = "en-fr";
-        TextInfo textInfo = new TextInfo(pair, text);
-        TranslateTextRequest translationRequest = new TranslateTextRequest(textInfo.toString());
-        TranslateTextResponse translateResponse = null;
+        TextRequest request = new TextRequest();
+        request.setSourceLanguage("en");
+        request.addTargetLanguagesItem("de");
+        request.addTextsItem("Text to translate");
+
         try {
-            translateResponse = TranslateApi.TranslateText(translationRequest);
-        } catch (IOException e) {
+            TranslationApi apiInstance = new TranslationApi(defaultClient);;
+            CloudTextResponse cloudTextResponse = apiInstance.textRequestIdGet(apiInstance.textPost(request).getId());
+            System.out.println(cloudTextResponse);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling TranslationApi");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
             e.printStackTrace();
         }
-        mTranslatedTextView.setText(translateResponse.translation);
+    }
 
     }
 
