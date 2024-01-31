@@ -9,5 +9,3 @@ dependencyResolutionManagement {
 rootProject.name = "GroupDocs.Translation.Cloud.SDK.Android"
 include ':app'
 include ':groupdocs-translation-cloud-android'
-include ':groupdocs-storage-cloud-android'
-

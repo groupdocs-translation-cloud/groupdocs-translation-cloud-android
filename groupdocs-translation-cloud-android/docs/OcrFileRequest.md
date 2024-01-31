@@ -1,6 +1,6 @@
 
 
-# ImageToFileRequest
+# OcrFileRequest
 
 
 ## Properties

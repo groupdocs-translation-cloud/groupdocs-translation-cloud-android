@@ -15,7 +15,7 @@ It is easy to get started with GroupDocs.Translation Cloud and there is nothing 
 ## Cloud Document Translation Features
 
 - Translation of Microsoft Word®, Microsoft Excel®, and Microsoft PowerPoint® documents
-- [46 languages and 96 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
+- [46 languages and 106 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes/endnotes, image captions in Word documents and ODT files
 - Translation of cells, charts, tables, pivot tables in Excel documents and ODS files
 - Translation of text frames, tables, headers, footers, charts, comments in PowerPoint presentations and ODP files
@@ -142,7 +142,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.groupdocs</groupId>
   <artifactId>GroupDocs-translation-cloud</artifactId>
-  <version>23.10</version>
+  <version>24.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -196,18 +196,18 @@ public class Example {
         String clientSecret = "YOUR_CLIENT_SECRET";
 
         ApiClient defaultClient = new ApiClient(basePath, cliendId, clientSecret, null);
+        TransportApi apiInstance = new TransportApi(defaultClient);
 
-
-        TranslationApi apiInstance = new TranslationApi(defaultClient);
-//        FileRequest fileRequest = new FileRequest(); // FileRequest | String in body of request, containing JSON with parameters for translation.
 
         TextRequest request = new TextRequest();
         request.setSourceLanguage("en");
         request.addTargetLanguagesItem("de");
         request.addTextsItem("Text to translate");
 
+
         try {
-            CloudTextResponse cloudTextResponse = apiInstance.textRequestIdGet(apiInstance.textPost(request).getId());
+            String r = apiInstance.textPost(request).getId();
+            CloudTextResponse cloudTextResponse = apiInstance.textRequestIdGet(r);
             System.out.println(cloudTextResponse);
         } catch (ApiException e) {
             System.err.println("Exception when calling TranslationApi#autoPost");

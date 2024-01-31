@@ -2,7 +2,7 @@ package com.groupdocs;
 // Import classes:
 
 import com.groupdocs.model.*;
-import org.openapitools.client.api.TranslationApi;
+import org.openapitools.client.api.TransportApi;
 
 public class Demo {
     public static void main(String[] args) {
@@ -11,18 +11,18 @@ public class Demo {
         String clientSecret = "YOUR_CLIENT_SECRET";
 
         ApiClient defaultClient = new ApiClient(basePath, cliendId, clientSecret, null);
+        TransportApi apiInstance = new TransportApi(defaultClient);
 
-
-        TranslationApi apiInstance = new TranslationApi(defaultClient);
-//        FileRequest fileRequest = new FileRequest(); // FileRequest | String in body of request, containing JSON with parameters for translation.
 
         TextRequest request = new TextRequest();
         request.setSourceLanguage("en");
         request.addTargetLanguagesItem("de");
         request.addTextsItem("Text to translate");
 
+
         try {
-            CloudTextResponse cloudTextResponse = apiInstance.textRequestIdGet(apiInstance.textPost(request).getId());
+            String r = apiInstance.textPost(request).getId();
+            CloudTextResponse cloudTextResponse = apiInstance.textRequestIdGet(r);
             System.out.println(cloudTextResponse);
         } catch (ApiException e) {
             System.err.println("Exception when calling TranslationApi#autoPost");
