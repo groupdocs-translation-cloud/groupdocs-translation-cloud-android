@@ -1,4 +1,4 @@
-# Java SDK for Translating Cloud Documents
+# Android SDK for Translating Cloud Documents
 
 ![](https://img.shields.io/badge/api-v2.0-lightgrey) ![GitHub license](https://img.shields.io/github/license/groupdocs-translation-cloud/groupdocs-translation-cloud-dotnet)
 
@@ -6,7 +6,7 @@
 
 [GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation/) is Cloud API to translate Word (including RTF and TXT files), Excel (including CSV / TSV files), PowerPoint, PDF, HTML, Markdown (including Markdown with Hugo syntax), OpenDocument, RESX, SRT files, images of JPG, PNG, SVG, BMP and GIF formats and scanned PDFs  as well as plain text.
 
-For convenience of our Java customers, we introduce a simple SDK that assists to add translation of all document and image file formats mmentions above and plain text to your app with merely a few lines of code.
+For convenience of our Android customers, we introduce a simple SDK that assists to add translation of all document and image file formats mmentions above and plain text to your app with merely a few lines of code.
 
 In detail, it's a set of SDKs for document and plain text translation in our Cloud. It supports translation of .doc, .docx, .docm, .xls, .xlsx, .xlsm, .ppt, .pptx, .pptm, .pdf, .html, .md, .odt, .ods, .odp, .csv, .tsv, .rtf, .txt, .resx, .srt, .png, .jpg, .svg, .bmp and .gif files. Just pass a specific file or text to the GroupDocs.Translation Cloud API, and it will translate and save translated file in S3 or will return translated text.
 
@@ -162,7 +162,7 @@ Add this dependency to your project's POM:
 ```xml
 <dependency>
   <groupId>com.groupdocs</groupId>
-  <artifactId>GroupDocs-translation-cloud</artifactId>
+  <artifactId>groupdocs-translation-cloud-android</artifactId>
   <version>24.1</version>
   <scope>compile</scope>
 </dependency>
@@ -179,7 +179,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.groupdocs:GroupDocs-translation-cloud:23.10"
+     implementation "groupdocs-translation-cloud-android:24.1"
   }
 ```
 
@@ -193,7 +193,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/GroupDocs-translation-cloud-23.10.jar`
+* `target/groupdocs-translation-cloud-android-24.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
