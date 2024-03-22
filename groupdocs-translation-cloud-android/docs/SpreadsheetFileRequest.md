@@ -17,7 +17,7 @@ Request for spreadsheet files, like xls, xlsx, xlsm, ods
 |**savingMode** | [**SavingModeEnum**](#SavingModeEnum) | Toggle file saving mode for storage.  Is Files by default. |  [optional] |
 |**format** | [**FormatEnum**](#FormatEnum) | Input file format |  |
 |**outputFormat** | [**OutputFormatEnum**](#OutputFormatEnum) | output file format |  |
-|**worksheets** | **List&lt;Integer&gt;** | List of Worksheets to translate by sequence number |  [optional] |
+|**worksheets** | **List&lt;Integer&gt;** | List of Worksheets to translate by sequence number (1-based index). If not present, translate all worksheets |  [optional] |
 |**ranges** | [**Map&lt;String, WorksheetData&gt;**](WorksheetData.md) | Dictionary of ranges in Excel workbooks |  [optional] |
 
 

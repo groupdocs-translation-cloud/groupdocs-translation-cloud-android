@@ -1,8 +1,8 @@
 lazy val root = (project in file(".")).
   settings(
     organization := "com.groupdocs",
-    name := "GroupDocs-translation-cloud",
-    version := "24.1",
+    name := "GroupDocs-translation-cloud-Android",
+    version := "24.3",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),

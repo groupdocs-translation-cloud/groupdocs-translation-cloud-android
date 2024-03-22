@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
 
 group = 'com.groupdocs'
-version = '24.1'
+version = '24.3'
 
 buildscript {
     repositories {
@@ -17,6 +17,9 @@ buildscript {
     }
 }
 
+repositories {
+    mavenCentral()
+}
 sourceSets {
     main.java.srcDirs = ['src/main/java']
 }
@@ -28,7 +31,7 @@ if(hasProperty('target') && target == 'android') {
 
     android {
         compileSdkVersion 25
-        buildToolsVersion '22.0.2'
+        buildToolsVersion '25.0.2'
         defaultConfig {
             minSdkVersion 14
             targetSdkVersion 25
@@ -86,7 +89,7 @@ if(hasProperty('target') && target == 'android') {
     publishing {
         publications {
             maven(MavenPublication) {
-               artifactId = 'GroupDocs-translation-cloud'
+               artifactId = 'GroupDocs-translation-cloud-Android'
                from components.java
             }
         }

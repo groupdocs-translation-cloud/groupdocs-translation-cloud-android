@@ -2,7 +2,7 @@ package com.groupdocs;
 // Import classes:
 
 import com.groupdocs.model.*;
-import org.openapitools.client.api.TransportApi;
+import org.openapitools.client.api.TranslationApi;
 
 public class Demo {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class Demo {
         String clientSecret = "YOUR_CLIENT_SECRET";
 
         ApiClient defaultClient = new ApiClient(basePath, cliendId, clientSecret, null);
-        TransportApi apiInstance = new TransportApi(defaultClient);
+        TranslationApi apiInstance = new TranslationApi(defaultClient);
 
 
         TextRequest request = new TextRequest();

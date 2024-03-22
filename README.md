@@ -2,11 +2,11 @@
 
 ![](https://img.shields.io/badge/api-v2.0-lightgrey) ![GitHub license](https://img.shields.io/github/license/groupdocs-translation-cloud/groupdocs-translation-cloud-dotnet)
 
-[Product Page](https://products.groupdocs.cloud/translation/java/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://reference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-java) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
+[Product Page](https://products.groupdocs.cloud/translation/android/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://reference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-android) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
 
 [GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation/) is Cloud API to translate Word (including RTF and TXT files), Excel (including CSV / TSV files), PowerPoint, PDF, HTML, Markdown (including Markdown with Hugo syntax), OpenDocument, RESX, SRT files, images of JPG, PNG, SVG, BMP and GIF formats and scanned PDFs  as well as plain text.
 
-For convenience of our Android customers, we introduce a simple SDK that assists to add translation of all document and image file formats mmentions above and plain text to your app with merely a few lines of code.
+For convenience of our Android customers, we introduce a simple SDK that assists to add translation of all document and image file formats mentioned above and plain text to your app with merely a few lines of code.
 
 In detail, it's a set of SDKs for document and plain text translation in our Cloud. It supports translation of .doc, .docx, .docm, .xls, .xlsx, .xlsm, .ppt, .pptx, .pptm, .pdf, .html, .md, .odt, .ods, .odp, .csv, .tsv, .rtf, .txt, .resx, .srt, .png, .jpg, .svg, .bmp and .gif files. Just pass a specific file or text to the GroupDocs.Translation Cloud API, and it will translate and save translated file in S3 or will return translated text.
 
@@ -15,7 +15,7 @@ It is easy to get started with GroupDocs.Translation Cloud and there is nothing 
 ## Cloud Document Translation Features
 
 - Translation of Microsoft Word®, Microsoft Excel®, and Microsoft PowerPoint® documents
-- [46 languages and 106 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
+- [46 languages and 128 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes/endnotes, image captions in Word documents and ODT files
 - Translation of cells, charts, tables, pivot tables in Excel documents and ODS files
 - Translation of text frames, tables, headers, footers, charts, comments in PowerPoint presentations and ODP files
@@ -77,7 +77,7 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 - **en-ro / ro-en** — to translate from English to Romanian or from Romanian to English
 - **en-ms / ms-en** — to translate from English to Malay or from Malay to English
 - **en-bg / bg-en** — to translate from English to Bulgarian or from Bulgarian to English
-- **en-be / be-en** — to translate from English to Bengali or from Bengali to English
+- **en-bn / bn-en** — to translate from English to Bengali or from Bengali to English
 - **en-da / da-en** — to translate from English to Danish or from Danish to English
 - **en-lt / lt-en** — to translate from English to Lithuanian or from Lithuanian to English
 - **en-lv / lv-en** — to translate from English to Latvian or from Latvian to English
@@ -94,8 +94,20 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 - **fr-de / de-fr** — to translate from French to German or from German to French
 - **fr-it / it-fr** — to translate from French to Italian or from Italian to French
 - **fr-ar / ar-fr** — to translate from French to Arabic or from Arabic to French
+- **fr-es / es-fr** — to translate from French to Spanish or from Spanish to French
+- **fr-id / id-fr** — to translate from French to Indonesian or from Indonesian to French
+- **fr-ms / ms-fr** — to translate from French to Malay or from Malay to French
+- **fr-pl / pl-fr** — to translate from French to Polish or from Polish to French
+- **fr-ru / ru-fr** — to translate from French to Russian or from Russian to French
+- **fr-ar / ar-fr** — to translate from French to Arabic or from Arabic to French
 - **de-it / it-de** — to translate from German to Italian or from Italian to German
 - **de-pl / pl-de** — to translate from German to Polish or from Polish to German
+- **de-ar / ar-de** — to translate from German to Arabic or from Arabic to German
+- **de-zh / zh-de** — to translate from German to Chinese or from Chinese to German
+- **de-es / es-de** — to translate from German to Spanish or from Spanish to German
+- **de-ms / ms-de** — to translate from German to Malay or from Malay to German
+- **it-es / es-it** — to translate from Italian to Spanish or from Spanish to Italian
+- **sv-zh / zh-sv** — to translate from Swedish to Chinese or from Chinese to Swedish
 - **ar-es / es-ar** — to translate from Arabic to Spanish or from Spaish to Arabic
 - **ar-tr / tr-ar** — to translate from Arabic to Turkish or from Turkish to Arabic 
 
@@ -123,6 +135,7 @@ To translate plain text the following information should be put in the requests 
 - **targetLanguages** — languages of translation as list (e.g. [fr, de])
 - **texts** — list of texts to translate (e.g. [hello world])
 - **contains-markdown** — true if text contains markdown syntax
+
 
 ## How to use the SDK?
 
@@ -162,8 +175,8 @@ Add this dependency to your project's POM:
 ```xml
 <dependency>
   <groupId>com.groupdocs</groupId>
-  <artifactId>groupdocs-translation-cloud-android</artifactId>
-  <version>24.1</version>
+  <artifactId>GroupDocs-translation-cloud-Android</artifactId>
+  <version>24.3</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -179,7 +192,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "groupdocs-translation-cloud-android:24.1"
+     implementation "com.groupdocs:GroupDocs-translation-cloud-Android:24.3"
   }
 ```
 
@@ -193,7 +206,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/groupdocs-translation-cloud-android-24.1.jar`
+* `target/GroupDocs-translation-cloud-Android-24.3.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -217,18 +230,15 @@ public class Example {
         String clientSecret = "YOUR_CLIENT_SECRET";
 
         ApiClient defaultClient = new ApiClient(basePath, cliendId, clientSecret, null);
-        TransportApi apiInstance = new TransportApi(defaultClient);
-
+        TranslationApi apiInstance = new TranslationApi(defaultClient);
 
         TextRequest request = new TextRequest();
         request.setSourceLanguage("en");
         request.addTargetLanguagesItem("de");
         request.addTextsItem("Text to translate");
 
-
         try {
-            String r = apiInstance.textPost(request).getId();
-            CloudTextResponse cloudTextResponse = apiInstance.textRequestIdGet(r);
+            CloudTextResponse cloudTextResponse = apiInstance.textRequestIdGet(apiInstance.textPost(request).getId());
             System.out.println(cloudTextResponse);
         } catch (ApiException e) {
             System.err.println("Exception when calling TranslationApi#autoPost");
@@ -297,6 +307,11 @@ Class | Method | HTTP request | Description
 - [UrlFileInfo](docs/UrlFileInfo.md)
 - [WorksheetData](docs/WorksheetData.md)
 
+
+<a id="documentation-for-authorization"></a>
+## Documentation for Authorization
+
+
 ## GroupDocs.Translation Cloud SDKs in Popular Languages
 
 | .NET | Java | Python | Android |
@@ -304,5 +319,4 @@ Class | Method | HTTP request | Description
 | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-dotnet) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-java) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-android) |
 | [NuGet](https://www.nuget.org/packages/GroupDocs.translation-Cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-translation-cloud) | [PIP](https://pypi.org/project/groupdocs-translation-cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-translation-cloud-android) |
 
-[Product Page](https://products.groupdocs.cloud/translation/java/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://apireference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-java) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
-
+[Product Page](https://products.groupdocs.cloud/translation/android/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://reference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-android) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)

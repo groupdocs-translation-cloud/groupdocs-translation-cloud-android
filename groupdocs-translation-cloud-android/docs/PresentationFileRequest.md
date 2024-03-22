@@ -18,7 +18,7 @@ Request for presentation files like ppt, pptx, pptm, odp
 |**format** | [**FormatEnum**](#FormatEnum) | Input file format |  [optional] |
 |**outputFormat** | **String** | Output file format |  [optional] |
 |**masters** | **Boolean** | If translate master slides |  [optional] |
-|**slides** | **List&lt;Integer&gt;** | List of slides to translate |  [optional] |
+|**slides** | **List&lt;Integer&gt;** | List of slides to translate (1-based index). If not present, translate all slides |  [optional] |
 
 
 

@@ -18,6 +18,7 @@ Request for files with textual content (doc, docx, docm, rtf, odt, txt
 |**outputFormat** | **String** | output file format |  |
 |**preserveFormatting** | **Boolean** | If document&#39;s formatting should be preserved, default true |  [optional] |
 |**origin** | **String** | for analysis only |  [optional] |
+|**pages** | **List&lt;Integer&gt;** | Choose pages for translation (1-based index). If not present, translate all pages |  [optional] |
 
 
 

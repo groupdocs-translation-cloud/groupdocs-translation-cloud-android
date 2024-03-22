@@ -17,7 +17,7 @@ Request for PDF files
 |**savingMode** | [**SavingModeEnum**](#SavingModeEnum) | Toggle file saving mode for storage.  Is Files by default. |  [optional] |
 |**outputFormat** | **String** | output file format |  |
 |**preserveFormatting** | **Boolean** | If document&#39;s formatting should be preserved, default true |  [optional] |
-|**pages** | **List&lt;Integer&gt;** | List of pages to translate |  [optional] |
+|**pages** | **List&lt;Integer&gt;** | List of pages to translate (1-based index). If not present, translate all pages |  [optional] |
 
 
 

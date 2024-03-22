@@ -10,7 +10,7 @@
 |**status** | **HttpStatusCode** |  |  [optional] |
 |**message** | **String** | If file was parsed correctly or text of error |  [optional] |
 |**frontmatters** | **List&lt;List&lt;String&gt;&gt;** | Structure of front matter syntax |  [optional] |
-|**shortcodes** | **List&lt;List&lt;String&gt;&gt;** | Structure of short code syntax |  [optional] |
+|**shortcodes** | **Map&lt;String, List&lt;List&lt;String&gt;&gt;&gt;** | Structure of short code syntax |  [optional] |
 
 
 

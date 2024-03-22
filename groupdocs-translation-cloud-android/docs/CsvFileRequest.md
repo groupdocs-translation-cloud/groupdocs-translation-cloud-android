@@ -16,7 +16,7 @@ Request for comma / tab separated files like csv, tsv
 |**origin** | **String** | Url or name of application using this SDK. Not required. |  [optional] |
 |**savingMode** | [**SavingModeEnum**](#SavingModeEnum) | Toggle file saving mode for storage.  Is Files by default. |  [optional] |
 |**format** | [**FormatEnum**](#FormatEnum) | Input file format |  [optional] |
-|**outFormat** | **String** | output file format |  |
+|**outputFormat** | **String** | output file format |  |
 |**separator** | **String** | Separator in files |  [optional] |
 
 
