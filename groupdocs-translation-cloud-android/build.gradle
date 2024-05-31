@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
 
 group = 'com.groupdocs'
-version = '24.3'
+version = '24.5'
 
 buildscript {
     repositories {
@@ -17,9 +17,7 @@ buildscript {
     }
 }
 
-repositories {
-    mavenCentral()
-}
+
 sourceSets {
     main.java.srcDirs = ['src/main/java']
 }
@@ -167,3 +165,16 @@ test {
     }
 
 }
+
+task deleteJar(type: Delete) {
+    delete 'libs/jars/logmanagementlib.jar'
+}
+
+task createJar(type: Copy) {
+    from('build/intermediates/bundles/release/')
+    into('libs/jars/')
+    include('classes.jar')
+    rename('classes.jar', 'logmanagementlib.jar')
+}
+
+createJar.dependsOn(deleteJar, build)

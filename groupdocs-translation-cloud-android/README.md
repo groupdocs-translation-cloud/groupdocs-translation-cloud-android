@@ -15,7 +15,7 @@ It is easy to get started with GroupDocs.Translation Cloud and there is nothing 
 ## Cloud Document Translation Features
 
 - Translation of Microsoft Word®, Microsoft Excel®, and Microsoft PowerPoint® documents
-- [46 languages and 128 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
+- [46 languages and 140 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes/endnotes, image captions in Word documents and ODT files
 - Translation of cells, charts, tables, pivot tables in Excel documents and ODS files
 - Translation of text frames, tables, headers, footers, charts, comments in PowerPoint presentations and ODP files
@@ -27,7 +27,7 @@ It is easy to get started with GroupDocs.Translation Cloud and there is nothing 
 - Translation of subtitles in SRT format
 - Translation of images and scanned PDFs getting plain text or PDF as a result
 - Translation of scanned tables getting Excel workbook as a result
-- Translation of handwritten text 
+- Translation of handwritten text
 
 ## Supported Translation Formats
 
@@ -106,16 +106,22 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 - **de-zh / zh-de** — to translate from German to Chinese or from Chinese to German
 - **de-es / es-de** — to translate from German to Spanish or from Spanish to German
 - **de-ms / ms-de** — to translate from German to Malay or from Malay to German
+- **de-uk / uk-de** — to translate from German to Ukrainian or from Ukrainian to German
 - **it-es / es-it** — to translate from Italian to Spanish or from Spanish to Italian
+- **it-ar / ar-it** — to translate from Italian to Arabic or from Arabic to Italian
+- **it-uk / uk-it** — to translate from Italian to Ukrainian or from Ukrainian to Italian
+- **it-ms / ms-it** — to translate from Italian to Malay or from Malay to Italian
 - **sv-zh / zh-sv** — to translate from Swedish to Chinese or from Chinese to Swedish
 - **ar-es / es-ar** — to translate from Arabic to Spanish or from Spaish to Arabic
-- **ar-tr / tr-ar** — to translate from Arabic to Turkish or from Turkish to Arabic 
+- **ar-tr / tr-ar** — to translate from Arabic to Turkish or from Turkish to Arabic
+- **ar-pl / pl-ar** — to translate from Arabic to Polish or from Polish to Arabic
+- **ru-es / es-ru** — to translate from Russian to Spanish or from Spaish to Russian
 
 ## JSON Request Details
 
 You can put the following information in the requests body to translate a document:
 
-- **format** — format of file for translation 
+- **format** — format of file for translation
 - **outputFormat** — format of translated file (e.g. pdf)
 - **sourceLanguage** — language of original document (e.g. en)
 - **targetLanguages** — languages of translation as list (e.g. [fr, de])
@@ -125,7 +131,7 @@ You can put the following information in the requests body to translate a docume
 - **masters** — if masters slides should be translated (only for presentations, pass true or false)
 - **elements** — slide pages to translate (only for presentations, pass empty list to translate whole presentation)
 - **separator** — delimiter for CSV files
-- **ranges** - dictionary of ranges in Excel workbook 
+- **ranges** - dictionary of ranges in Excel workbook
 - **shortcodedict** — dictionary of short code syntax in Hugo to translate, where the key is zero based short code index, and value is a list of parameters names that require translation
 - **frontmatterdict** — dictionary of front matter syntax in Hugo to translate, where the key is zero based front matter index and value is list of paths to values that require translation, each path is also a list.
 
@@ -176,7 +182,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.groupdocs</groupId>
   <artifactId>GroupDocs-translation-cloud-Android</artifactId>
-  <version>24.3</version>
+  <version>24.5</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -192,7 +198,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.groupdocs:GroupDocs-translation-cloud-Android:24.3"
+     implementation "com.groupdocs:GroupDocs-translation-cloud-Android:24.5"
   }
 ```
 
@@ -206,7 +212,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/GroupDocs-translation-cloud-Android-24.3.jar`
+* `target/GroupDocs-translation-cloud-Android-24.5.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -247,7 +253,7 @@ public class Example {
             System.err.println("Response headers: " + e.getResponseHeaders());
             e.printStackTrace();
         }
-  }
+    }
 }
 
 ```
@@ -306,10 +312,6 @@ Class | Method | HTTP request | Description
 - [TextRequest](docs/TextRequest.md)
 - [UrlFileInfo](docs/UrlFileInfo.md)
 - [WorksheetData](docs/WorksheetData.md)
-
-
-<a id="documentation-for-authorization"></a>
-## Documentation for Authorization
 
 
 ## GroupDocs.Translation Cloud SDKs in Popular Languages

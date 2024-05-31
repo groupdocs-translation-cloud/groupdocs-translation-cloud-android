@@ -83,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
             System.err.println("Response headers: " + e.getResponseHeaders());
             e.printStackTrace();
         }
-    }
 
     }
 
