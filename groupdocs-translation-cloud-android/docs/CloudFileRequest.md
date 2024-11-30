@@ -20,7 +20,7 @@
 |**ranges** | [**Map&lt;String, WorksheetData&gt;**](WorksheetData.md) | Dictionary of ranges in Excel workbooks |  [optional] |
 |**shortCodeDict** | **Map&lt;String, List&lt;String&gt;&gt;** | Dictiory of short code names and parameters names to translate |  [optional] |
 |**frontMatterList** | **List&lt;List&lt;String&gt;&gt;** | Dictionary where key is zero-based front matter index and value is list of lists of front matter paths |  [optional] |
-|**originalName** | **String** | Original name of file |  [optional] |
+|**originalFileName** | **String** | Original name of file |  [optional] |
 |**separator** | **String** | Separator in files |  [optional] |
 |**isPaid** | **Boolean** | Set true if paid user |  [optional] |
 |**savingMode** | [**SavingModeEnum**](#SavingModeEnum) | Toggle files saving mode |  [optional] |

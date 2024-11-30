@@ -7,8 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**kafkaDeliveryStatus** | **String** |  |  [optional] |
-|**cloudStatus** | **String** |  |  [optional] |
+|**items** | [**List&lt;HealthCheckEntity&gt;**](HealthCheckEntity.md) |  |  [optional] |
 
 
 

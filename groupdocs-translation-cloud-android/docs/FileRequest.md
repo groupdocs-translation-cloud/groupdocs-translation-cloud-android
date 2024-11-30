@@ -24,6 +24,8 @@
 |**ranges** | [**Map&lt;String, WorksheetData&gt;**](WorksheetData.md) | Dictionary of ranges in Excel workbooks |  [optional] |
 |**shortcodedict** | **Map&lt;String, List&lt;String&gt;&gt;** | Dictionary of short code names and parameters names to translate |  [optional] |
 |**frontMatterList** | **List&lt;List&lt;String&gt;&gt;** | Dictionary where key is zero-based front matter index and value is list of lists of front matter paths |  [optional] |
+|**ignoreList** | **List&lt;String&gt;** | List of elements for Xml, Json and Yaml formats. Determines which items should be blacklisted or whitelisted for processing depending on GroupDocs.Translation.ApiGateway.DTO.FileRequest.IsWhiteList. |  [optional] |
+|**isWhiteList** | **Boolean** | Determines to which list the items in GroupDocs.Translation.ApiGateway.DTO.FileRequest.IgnoreList should be allocated. The default is the black list. |  [optional] |
 
 
 
@@ -63,6 +65,21 @@
 | CSV | &quot;Csv&quot; |
 | TSV | &quot;Tsv&quot; |
 | SRT | &quot;Srt&quot; |
+| PDFX | &quot;Pdfx&quot; |
+| MP3 | &quot;Mp3&quot; |
+| WAV | &quot;Wav&quot; |
+| FLAC | &quot;Flac&quot; |
+| M4A | &quot;M4a&quot; |
+| AAC | &quot;Aac&quot; |
+| WMA | &quot;Wma&quot; |
+| FLV | &quot;Flv&quot; |
+| MKV | &quot;Mkv&quot; |
+| WEBM | &quot;Webm&quot; |
+| AVI | &quot;Avi&quot; |
+| MOV | &quot;Mov&quot; |
+| WMV | &quot;Wmv&quot; |
+| RM | &quot;Rm&quot; |
+| MPG | &quot;Mpg&quot; |
 
 
 

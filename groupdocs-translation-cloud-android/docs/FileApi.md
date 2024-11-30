@@ -33,7 +33,7 @@ public class Example {
     JWT.setAccessToken("YOUR ACCESS TOKEN");
 
     FileApi apiInstance = new FileApi(defaultClient);
-    String format = "Unknown"; // String | 
+    String format = "format_example"; // String | 
     File _file = new File("/path/to/file"); // File | 
     try {
       String result = apiInstance.fileUploadPost(format, _file);
@@ -53,7 +53,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **format** | **String**|  | [optional] [enum: Unknown, Doc, Docx, Docm, Xls, Xlsx, Xlsm, Ppt, Pptx, Pptm, Txt, Pdf, Md, Resx, Html, Rtf, Odt, Ods, Odp, Csv, Tsv, Srt] |
+| **format** | **String**|  | [optional] |
 | **_file** | **File**|  | [optional] |
 
 ### Return type
