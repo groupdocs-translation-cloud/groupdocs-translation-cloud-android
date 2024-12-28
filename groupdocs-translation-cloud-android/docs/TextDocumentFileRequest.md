@@ -10,7 +10,6 @@ Request for files with textual content (doc, docx, docm, rtf, odt, txt
 |------------ | ------------- | ------------- | -------------|
 |**sourceLanguage** | **String** | Language of original file |  |
 |**targetLanguages** | **List&lt;String&gt;** | List of target languages |  |
-|**_file** | **byte[]** | File as byte array |  [optional] |
 |**originalFileName** | **String** | Type in the file name. If null will be as request ID. |  [optional] |
 |**url** | **String** | Link to file for translation. Ignore, if \&quot;file\&quot; property not null |  [optional] |
 |**savingMode** | [**SavingModeEnum**](#SavingModeEnum) | Toggle file saving mode for storage.  Is Files by default. |  [optional] |

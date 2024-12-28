@@ -49,7 +49,7 @@ import com.groupdocs.JSON;
 /**
  * HugoRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-30T16:18:20.975621+03:00[Europe/Moscow]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-24T16:29:12.172040+03:00[Europe/Moscow]", comments = "Generator version: 7.10.0")
 public class HugoRequest {
   public static final String SERIALIZED_NAME_FILE = "file";
   @SerializedName(SERIALIZED_NAME_FILE)

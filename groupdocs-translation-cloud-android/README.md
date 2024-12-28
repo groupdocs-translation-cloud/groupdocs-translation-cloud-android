@@ -15,10 +15,10 @@ It is easy to get started with GroupDocs.Translation Cloud and there is nothing 
 ## Cloud Document Translation Features
 
 - Translation of Microsoft Word®, Microsoft Excel®, and Microsoft PowerPoint® documents
-- [46 languages and 140 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
+- [46 languages and 164 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes/endnotes, image captions in Word documents and ODT files
 - Translation of cells, charts, tables, pivot tables in Excel documents and ODS files
-- Translation of text frames, tables, headers, footers, charts, comments in PowerPoint presentations and ODP filesAA
+- Translation of text frames, tables, headers, footers, charts, comments in PowerPoint presentations and ODP files
 - Translation of PDF files
 - Translation of Markdown files
 - Translation of Hugo syntax in Markdown files
@@ -101,7 +101,10 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 - **fr-ms / ms-fr** — to translate from French to Malay or from Malay to French
 - **fr-pl / pl-fr** — to translate from French to Polish or from Polish to French
 - **fr-ru / ru-fr** — to translate from French to Russian or from Russian to French
-- **fr-ar / ar-fr** — to translate from French to Arabic or from Arabic to French
+- **fr-af / af-fr** — to translate from French to Afrikaans or from Afrikaans to French
+- **fr-el / el-fr** — to translate from French to Greek or from Greek to French
+- **fr-vi / vi-fr** — to translate from French to Vietnamese or from Vietnamese to French
+- **fr-sv / sv-fr** — to translate from French to Swedish or from Swedish to French
 - **de-it / it-de** — to translate from German to Italian or from Italian to German
 - **de-pl / pl-de** — to translate from German to Polish or from Polish to German
 - **de-ar / ar-de** — to translate from German to Arabic or from Arabic to German
@@ -109,15 +112,23 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 - **de-es / es-de** — to translate from German to Spanish or from Spanish to German
 - **de-ms / ms-de** — to translate from German to Malay or from Malay to German
 - **de-uk / uk-de** — to translate from German to Ukrainian or from Ukrainian to German
+- **de-no / no-de** — to translate from German to Norwegian or from Norwegian to German
 - **it-es / es-it** — to translate from Italian to Spanish or from Spanish to Italian
 - **it-ar / ar-it** — to translate from Italian to Arabic or from Arabic to Italian
 - **it-uk / uk-it** — to translate from Italian to Ukrainian or from Ukrainian to Italian
 - **it-ms / ms-it** — to translate from Italian to Malay or from Malay to Italian
 - **sv-zh / zh-sv** — to translate from Swedish to Chinese or from Chinese to Swedish
-- **ar-es / es-ar** — to translate from Arabic to Spanish or from Spaish to Arabic
-- **ar-tr / tr-ar** — to translate from Arabic to Turkish or from Turkish to Arabic
-- **ar-pl / pl-ar** — to translate from Arabic to Polish or from Polish to Arabic
-- **ru-es / es-ru** — to translate from Russian to Spanish or from Spaish to Russian
+- **sv-el / el-sv** — to translate from Swedish to Greek or from Greek to Swedish
+- **nl-af / af-nl** — to translate from Dutch to Afrikaans or from Afrikaans to Dutch
+- **nl-fi / fi-nl** — to translate from Dutch to Finnish or from Finnish to Dutch
+- **uk-es / es-uk** — to translate from Ukrainian to Spanish or from Spanish to Ukrainian
+- **uk-ru / ru-uk** — to translate from Ukrainian to Russian or from Russian to Ukrainian
+- **es-ru / ru-es** — to translate from Spanish to Russian or from Russian to Spanish
+- **es-ar / ar-es** — to translate from Spanish to Arabic or from Arabic to Spanish
+- **ar-tr / tr-ar** — to translate from Arabic to Turkish or from Turkish to Arabic 
+- **ar-pl / pl-ar** — to translate from Arabic to Polish or from Polish to Arabic 
+- **ru-ar / ar-ru** — to translate from Russian to Arabic or from Arabic to Russian
+- **ru-af / af-ru** — to translate from Russian to Afrikaans or from Afrikaans to Russian
 
 ## JSON Request Details
 
@@ -184,7 +195,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.groupdocs</groupId>
   <artifactId>GroupDocs-translation-cloud-Android</artifactId>
-  <version>24.11</version>
+  <version>24.12</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -200,7 +211,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.groupdocs:GroupDocs-translation-cloud-Android:24.11"
+     implementation "com.groupdocs:GroupDocs-translation-cloud-Android:24.12"
   }
 ```
 
@@ -214,7 +225,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/GroupDocs-translation-cloud-Android-24.11.jar`
+* `target/GroupDocs-translation-cloud-Android-24.12.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -224,11 +235,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
-import com.groupdocs.ApiClient;
-import com.groupdocs.ApiException;
-import com.groupdocs.Configuration;
-import com.groupdocs.auth.*;
-import com.groupdocs.models.*;
+import com.groupdocs.model.*;
 import org.openapitools.client.api.TranslationApi;
 
 public class Example {
@@ -238,8 +245,8 @@ public class Example {
         String clientSecret = "YOUR_CLIENT_SECRET";
 
         ApiClient defaultClient = new ApiClient(basePath, cliendId, clientSecret, null);
-
         TranslationApi apiInstance = new TranslationApi(defaultClient);
+
         TextRequest request = new TextRequest();
         request.setSourceLanguage("en");
         request.addTargetLanguagesItem("de");
@@ -249,7 +256,7 @@ public class Example {
             CloudTextResponse cloudTextResponse = apiInstance.textRequestIdGet(apiInstance.textPost(request).getId());
             System.out.println(cloudTextResponse);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TranslationApi#autoPost");
+            System.err.println("Exception when calling TranslationApi#textPost");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -328,7 +335,7 @@ Class | Method | HTTP request | Description
  - [UrlFileInfo](docs/UrlFileInfo.md)
  - [WorksheetData](docs/WorksheetData.md)
  - [XmlFileRequest](docs/XmlFileRequest.md)
- 
+
 
 ## GroupDocs.Translation Cloud SDKs in Popular Languages
 

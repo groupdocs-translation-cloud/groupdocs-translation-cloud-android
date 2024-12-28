@@ -54,7 +54,7 @@ import com.groupdocs.JSON;
 /**
  * Request for spreadsheet files, like xls, xlsx, xlsm, ods
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-30T16:18:20.975621+03:00[Europe/Moscow]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-24T16:29:12.172040+03:00[Europe/Moscow]", comments = "Generator version: 7.10.0")
 public class SpreadsheetFileRequest {
   public static final String SERIALIZED_NAME_SOURCE_LANGUAGE = "sourceLanguage";
   @SerializedName(SERIALIZED_NAME_SOURCE_LANGUAGE)
@@ -65,11 +65,6 @@ public class SpreadsheetFileRequest {
   @SerializedName(SERIALIZED_NAME_TARGET_LANGUAGES)
   @javax.annotation.Nonnull
   private List<String> targetLanguages = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_FILE = "file";
-  @SerializedName(SERIALIZED_NAME_FILE)
-  @javax.annotation.Nullable
-  private byte[] _file;
 
   public static final String SERIALIZED_NAME_ORIGINAL_FILE_NAME = "originalFileName";
   @SerializedName(SERIALIZED_NAME_ORIGINAL_FILE_NAME)
@@ -344,25 +339,6 @@ public class SpreadsheetFileRequest {
   }
 
 
-  public SpreadsheetFileRequest _file(@javax.annotation.Nullable byte[] _file) {
-    this._file = _file;
-    return this;
-  }
-
-  /**
-   * File as byte array
-   * @return _file
-   */
-  @javax.annotation.Nullable
-  public byte[] getFile() {
-    return _file;
-  }
-
-  public void setFile(@javax.annotation.Nullable byte[] _file) {
-    this._file = _file;
-  }
-
-
   public SpreadsheetFileRequest originalFileName(@javax.annotation.Nullable String originalFileName) {
     this.originalFileName = originalFileName;
     return this;
@@ -543,7 +519,6 @@ public class SpreadsheetFileRequest {
     SpreadsheetFileRequest spreadsheetFileRequest = (SpreadsheetFileRequest) o;
     return Objects.equals(this.sourceLanguage, spreadsheetFileRequest.sourceLanguage) &&
         Objects.equals(this.targetLanguages, spreadsheetFileRequest.targetLanguages) &&
-        Arrays.equals(this._file, spreadsheetFileRequest._file) &&
         Objects.equals(this.originalFileName, spreadsheetFileRequest.originalFileName) &&
         Objects.equals(this.url, spreadsheetFileRequest.url) &&
         Objects.equals(this.origin, spreadsheetFileRequest.origin) &&
@@ -560,7 +535,7 @@ public class SpreadsheetFileRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(sourceLanguage, targetLanguages, Arrays.hashCode(_file), originalFileName, url, origin, savingMode, format, outputFormat, worksheets, ranges);
+    return Objects.hash(sourceLanguage, targetLanguages, originalFileName, url, origin, savingMode, format, outputFormat, worksheets, ranges);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -576,7 +551,6 @@ public class SpreadsheetFileRequest {
     sb.append("class SpreadsheetFileRequest {\n");
     sb.append("    sourceLanguage: ").append(toIndentedString(sourceLanguage)).append("\n");
     sb.append("    targetLanguages: ").append(toIndentedString(targetLanguages)).append("\n");
-    sb.append("    _file: ").append(toIndentedString(_file)).append("\n");
     sb.append("    originalFileName: ").append(toIndentedString(originalFileName)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("    origin: ").append(toIndentedString(origin)).append("\n");
@@ -609,7 +583,6 @@ public class SpreadsheetFileRequest {
     openapiFields = new HashSet<String>();
     openapiFields.add("sourceLanguage");
     openapiFields.add("targetLanguages");
-    openapiFields.add("file");
     openapiFields.add("originalFileName");
     openapiFields.add("url");
     openapiFields.add("origin");

@@ -25,7 +25,7 @@ public class Demo {
             CloudTextResponse cloudTextResponse = apiInstance.textRequestIdGet(r);
             System.out.println(cloudTextResponse);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TranslationApi#autoPost");
+            System.err.println("Exception when calling TranslationApi#textPost");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

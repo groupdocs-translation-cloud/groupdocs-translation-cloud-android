@@ -51,7 +51,7 @@ import com.groupdocs.JSON;
 /**
  * MediaToTextRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-30T16:18:20.975621+03:00[Europe/Moscow]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-24T16:29:12.172040+03:00[Europe/Moscow]", comments = "Generator version: 7.10.0")
 public class MediaToTextRequest {
   public static final String SERIALIZED_NAME_SOURCE_LANGUAGE = "sourceLanguage";
   @SerializedName(SERIALIZED_NAME_SOURCE_LANGUAGE)
@@ -62,11 +62,6 @@ public class MediaToTextRequest {
   @SerializedName(SERIALIZED_NAME_TARGET_LANGUAGES)
   @javax.annotation.Nonnull
   private List<String> targetLanguages = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_FILE = "file";
-  @SerializedName(SERIALIZED_NAME_FILE)
-  @javax.annotation.Nullable
-  private byte[] _file;
 
   public static final String SERIALIZED_NAME_ORIGINAL_FILE_NAME = "originalFileName";
   @SerializedName(SERIALIZED_NAME_ORIGINAL_FILE_NAME)
@@ -294,25 +289,6 @@ public class MediaToTextRequest {
   }
 
 
-  public MediaToTextRequest _file(@javax.annotation.Nullable byte[] _file) {
-    this._file = _file;
-    return this;
-  }
-
-  /**
-   * File as byte array
-   * @return _file
-   */
-  @javax.annotation.Nullable
-  public byte[] getFile() {
-    return _file;
-  }
-
-  public void setFile(@javax.annotation.Nullable byte[] _file) {
-    this._file = _file;
-  }
-
-
   public MediaToTextRequest originalFileName(@javax.annotation.Nullable String originalFileName) {
     this.originalFileName = originalFileName;
     return this;
@@ -512,7 +488,6 @@ public class MediaToTextRequest {
     MediaToTextRequest mediaToTextRequest = (MediaToTextRequest) o;
     return Objects.equals(this.sourceLanguage, mediaToTextRequest.sourceLanguage) &&
         Objects.equals(this.targetLanguages, mediaToTextRequest.targetLanguages) &&
-        Arrays.equals(this._file, mediaToTextRequest._file) &&
         Objects.equals(this.originalFileName, mediaToTextRequest.originalFileName) &&
         Objects.equals(this.url, mediaToTextRequest.url) &&
         Objects.equals(this.origin, mediaToTextRequest.origin) &&
@@ -530,7 +505,7 @@ public class MediaToTextRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(sourceLanguage, targetLanguages, Arrays.hashCode(_file), originalFileName, url, origin, savingMode, source, targets, format, fragments, route);
+    return Objects.hash(sourceLanguage, targetLanguages, originalFileName, url, origin, savingMode, source, targets, format, fragments, route);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -546,7 +521,6 @@ public class MediaToTextRequest {
     sb.append("class MediaToTextRequest {\n");
     sb.append("    sourceLanguage: ").append(toIndentedString(sourceLanguage)).append("\n");
     sb.append("    targetLanguages: ").append(toIndentedString(targetLanguages)).append("\n");
-    sb.append("    _file: ").append(toIndentedString(_file)).append("\n");
     sb.append("    originalFileName: ").append(toIndentedString(originalFileName)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("    origin: ").append(toIndentedString(origin)).append("\n");
@@ -580,7 +554,6 @@ public class MediaToTextRequest {
     openapiFields = new HashSet<String>();
     openapiFields.add("sourceLanguage");
     openapiFields.add("targetLanguages");
-    openapiFields.add("file");
     openapiFields.add("originalFileName");
     openapiFields.add("url");
     openapiFields.add("origin");

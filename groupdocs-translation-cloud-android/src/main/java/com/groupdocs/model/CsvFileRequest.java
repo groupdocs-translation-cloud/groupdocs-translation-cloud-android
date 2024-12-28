@@ -51,7 +51,7 @@ import com.groupdocs.JSON;
 /**
  * Request for comma / tab separated files like csv, tsv
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-30T16:18:20.975621+03:00[Europe/Moscow]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-24T16:29:12.172040+03:00[Europe/Moscow]", comments = "Generator version: 7.10.0")
 public class CsvFileRequest {
   public static final String SERIALIZED_NAME_SOURCE_LANGUAGE = "sourceLanguage";
   @SerializedName(SERIALIZED_NAME_SOURCE_LANGUAGE)
@@ -62,11 +62,6 @@ public class CsvFileRequest {
   @SerializedName(SERIALIZED_NAME_TARGET_LANGUAGES)
   @javax.annotation.Nonnull
   private List<String> targetLanguages = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_FILE = "file";
-  @SerializedName(SERIALIZED_NAME_FILE)
-  @javax.annotation.Nullable
-  private byte[] _file;
 
   public static final String SERIALIZED_NAME_ORIGINAL_FILE_NAME = "originalFileName";
   @SerializedName(SERIALIZED_NAME_ORIGINAL_FILE_NAME)
@@ -260,25 +255,6 @@ public class CsvFileRequest {
   }
 
 
-  public CsvFileRequest _file(@javax.annotation.Nullable byte[] _file) {
-    this._file = _file;
-    return this;
-  }
-
-  /**
-   * File as byte array
-   * @return _file
-   */
-  @javax.annotation.Nullable
-  public byte[] getFile() {
-    return _file;
-  }
-
-  public void setFile(@javax.annotation.Nullable byte[] _file) {
-    this._file = _file;
-  }
-
-
   public CsvFileRequest originalFileName(@javax.annotation.Nullable String originalFileName) {
     this.originalFileName = originalFileName;
     return this;
@@ -424,7 +400,6 @@ public class CsvFileRequest {
     CsvFileRequest csvFileRequest = (CsvFileRequest) o;
     return Objects.equals(this.sourceLanguage, csvFileRequest.sourceLanguage) &&
         Objects.equals(this.targetLanguages, csvFileRequest.targetLanguages) &&
-        Arrays.equals(this._file, csvFileRequest._file) &&
         Objects.equals(this.originalFileName, csvFileRequest.originalFileName) &&
         Objects.equals(this.url, csvFileRequest.url) &&
         Objects.equals(this.origin, csvFileRequest.origin) &&
@@ -440,7 +415,7 @@ public class CsvFileRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(sourceLanguage, targetLanguages, Arrays.hashCode(_file), originalFileName, url, origin, savingMode, format, outputFormat, separator);
+    return Objects.hash(sourceLanguage, targetLanguages, originalFileName, url, origin, savingMode, format, outputFormat, separator);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -456,7 +431,6 @@ public class CsvFileRequest {
     sb.append("class CsvFileRequest {\n");
     sb.append("    sourceLanguage: ").append(toIndentedString(sourceLanguage)).append("\n");
     sb.append("    targetLanguages: ").append(toIndentedString(targetLanguages)).append("\n");
-    sb.append("    _file: ").append(toIndentedString(_file)).append("\n");
     sb.append("    originalFileName: ").append(toIndentedString(originalFileName)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("    origin: ").append(toIndentedString(origin)).append("\n");
@@ -488,7 +462,6 @@ public class CsvFileRequest {
     openapiFields = new HashSet<String>();
     openapiFields.add("sourceLanguage");
     openapiFields.add("targetLanguages");
-    openapiFields.add("file");
     openapiFields.add("originalFileName");
     openapiFields.add("url");
     openapiFields.add("origin");

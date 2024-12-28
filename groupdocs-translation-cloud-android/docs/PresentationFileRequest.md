@@ -10,7 +10,6 @@ Request for presentation files like ppt, pptx, pptm, odp
 |------------ | ------------- | ------------- | -------------|
 |**sourceLanguage** | **String** | Language of original file |  [optional] |
 |**targetLanguages** | **List&lt;String&gt;** | List of target languages |  [optional] |
-|**_file** | **byte[]** | File as byte array |  [optional] |
 |**originalFileName** | **String** | Type in the file name. If null will be as request ID. |  [optional] |
 |**url** | **String** | Link to file for translation. Ignore, if \&quot;file\&quot; property not null |  [optional] |
 |**origin** | **String** | Url or name of application using this SDK. Not required. |  [optional] |

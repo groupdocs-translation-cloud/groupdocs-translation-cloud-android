@@ -57,14 +57,6 @@ public class CsvFileRequestTest {
     }
 
     /**
-     * Test the property '_file'
-     */
-    @Test
-    public void _fileTest() {
-        // TODO: test _file
-    }
-
-    /**
      * Test the property 'originalFileName'
      */
     @Test
