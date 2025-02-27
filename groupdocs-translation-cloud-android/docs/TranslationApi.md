@@ -26,8 +26,14 @@ All URIs are relative to *https://api.groupdocs.cloud/v2.0/translation*
 | [**resxPost**](TranslationApi.md#resxPost) | **POST** /resx | Translate Resx files |
 | [**spreadsheetPost**](TranslationApi.md#spreadsheetPost) | **POST** /spreadsheet | Translate Microsoft Excel workbooks, ods |
 | [**srtPost**](TranslationApi.md#srtPost) | **POST** /srt | Translate Srt files |
+| [**summarizeDocumentPost**](TranslationApi.md#summarizeDocumentPost) | **POST** /summarize-document | Summarize and translate document file |
+| [**summarizeImagePost**](TranslationApi.md#summarizeImagePost) | **POST** /summarize-image | Summarize and translate image or scanned pdf and return file |
+| [**summarizeMediaPost**](TranslationApi.md#summarizeMediaPost) | **POST** /summarize-media | Summarize audio or video, translate it  and return file as a result |
+| [**summarizeTextPost**](TranslationApi.md#summarizeTextPost) | **POST** /summarize-text | Summarize and translate text |
+| [**textMedicalPost**](TranslationApi.md#textMedicalPost) | **POST** /text/medical | Translate medical |
 | [**textPost**](TranslationApi.md#textPost) | **POST** /text | Translate text |
 | [**textRequestIdGet**](TranslationApi.md#textRequestIdGet) | **GET** /text/{requestId} | Return text translation status.  Also return translated text if translation was successful |
+| [**textSlangPost**](TranslationApi.md#textSlangPost) | **POST** /text/slang | Translate slang |
 | [**textTrialGet**](TranslationApi.md#textTrialGet) | **GET** /text/trial | Return text translation status for trial requests.  Also return translated text if translation was successful |
 | [**textTrialPost**](TranslationApi.md#textTrialPost) | **POST** /text/trial | Trial translate text. Translate only 1000 symbols. |
 | [**xmlPost**](TranslationApi.md#xmlPost) | **POST** /xml | Translate XML files |
@@ -1459,6 +1465,331 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 
+<a id="summarizeDocumentPost"></a>
+# **summarizeDocumentPost**
+> StatusResponse summarizeDocumentPost(fileRequest)
+
+Summarize and translate document file
+
+### Example
+```java
+// Import classes:
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
+import org.openapitools.client.api.TranslationApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/translation");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
+
+    TranslationApi apiInstance = new TranslationApi(defaultClient);
+    FileRequest fileRequest = new FileRequest(); // FileRequest | String in body of request, containing JSON with parameters for translation.
+    try {
+      StatusResponse result = apiInstance.summarizeDocumentPost(fileRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TranslationApi#summarizeDocumentPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fileRequest** | [**FileRequest**](FileRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] |
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+<a id="summarizeImagePost"></a>
+# **summarizeImagePost**
+> StatusResponse summarizeImagePost(imageToFileRequest)
+
+Summarize and translate image or scanned pdf and return file
+
+### Example
+```java
+// Import classes:
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
+import org.openapitools.client.api.TranslationApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/translation");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
+
+    TranslationApi apiInstance = new TranslationApi(defaultClient);
+    ImageToFileRequest imageToFileRequest = new ImageToFileRequest(); // ImageToFileRequest | String in body of request, containing JSON with parameters for translation.
+    try {
+      StatusResponse result = apiInstance.summarizeImagePost(imageToFileRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TranslationApi#summarizeImagePost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageToFileRequest** | [**ImageToFileRequest**](ImageToFileRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] |
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+<a id="summarizeMediaPost"></a>
+# **summarizeMediaPost**
+> StatusResponse summarizeMediaPost(mediaToFileRequest)
+
+Summarize audio or video, translate it  and return file as a result
+
+### Example
+```java
+// Import classes:
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
+import org.openapitools.client.api.TranslationApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/translation");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
+
+    TranslationApi apiInstance = new TranslationApi(defaultClient);
+    MediaToFileRequest mediaToFileRequest = new MediaToFileRequest(); // MediaToFileRequest | String in body of request, containing JSON with parameters for translation.
+    try {
+      StatusResponse result = apiInstance.summarizeMediaPost(mediaToFileRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TranslationApi#summarizeMediaPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mediaToFileRequest** | [**MediaToFileRequest**](MediaToFileRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] |
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+<a id="summarizeTextPost"></a>
+# **summarizeTextPost**
+> StatusResponse summarizeTextPost(textRequest)
+
+Summarize and translate text
+
+### Example
+```java
+// Import classes:
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
+import org.openapitools.client.api.TranslationApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/translation");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
+
+    TranslationApi apiInstance = new TranslationApi(defaultClient);
+    TextRequest textRequest = new TextRequest(); // TextRequest | String in body of request, containing JSON with parameters for translation.
+    try {
+      StatusResponse result = apiInstance.summarizeTextPost(textRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TranslationApi#summarizeTextPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **textRequest** | [**TextRequest**](TextRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] |
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+<a id="textMedicalPost"></a>
+# **textMedicalPost**
+> StatusResponse textMedicalPost(textRequest)
+
+Translate medical
+
+### Example
+```java
+// Import classes:
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
+import org.openapitools.client.api.TranslationApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/translation");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
+
+    TranslationApi apiInstance = new TranslationApi(defaultClient);
+    TextRequest textRequest = new TextRequest(); // TextRequest | String in body of request, containing JSON with parameters for translation.
+    try {
+      StatusResponse result = apiInstance.textMedicalPost(textRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TranslationApi#textMedicalPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **textRequest** | [**TextRequest**](TextRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] |
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
 <a id="textPost"></a>
 # **textPost**
 > StatusResponse textPost(textRequest)
@@ -1589,6 +1920,71 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
 | **202** | Accepted |  -  |
+
+<a id="textSlangPost"></a>
+# **textSlangPost**
+> StatusResponse textSlangPost(textRequest)
+
+Translate slang
+
+### Example
+```java
+// Import classes:
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
+import org.openapitools.client.api.TranslationApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.groupdocs.cloud/v2.0/translation");
+    
+    // Configure OAuth2 access token for authorization: JWT
+    OAuth JWT = (OAuth) defaultClient.getAuthentication("JWT");
+    JWT.setAccessToken("YOUR ACCESS TOKEN");
+
+    TranslationApi apiInstance = new TranslationApi(defaultClient);
+    TextRequest textRequest = new TextRequest(); // TextRequest | String in body of request, containing JSON with parameters for translation.
+    try {
+      StatusResponse result = apiInstance.textSlangPost(textRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TranslationApi#textSlangPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **textRequest** | [**TextRequest**](TextRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] |
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
 
 <a id="textTrialGet"></a>
 # **textTrialGet**

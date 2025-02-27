@@ -11,6 +11,7 @@
 |**outFormat** | **String** | output file format |  [optional] |
 |**requestId** | **String** | id of request |  [optional] |
 |**ids** | **List&lt;Integer&gt;** | Language pairs to translate |  [optional] |
+|**summarized** | **Boolean** | If summarization required |  [optional] |
 |**url** | **String** | Link to file for translation |  [optional] |
 |**size** | **Long** | File size |  [optional] |
 |**masters** | **Boolean** | If translate master slides |  [optional] |
