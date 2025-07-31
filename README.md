@@ -2,9 +2,9 @@
 
 ![](https://img.shields.io/badge/api-v2.0-lightgrey) ![GitHub license](https://img.shields.io/github/license/groupdocs-translation-cloud/groupdocs-translation-cloud-dotnet)
 
-[Product Page](https://products.groupdocs.cloud/translation/android/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://reference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-android) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
+[Product Page](https://products.groupdocs.cloud/translation/java/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://reference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-java) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
 
-[GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation/) is Cloud API to translate Word (including RTF and TXT files), Excel (including CSV / TSV files), PowerPoint, PDF, HTML, Markdown (including Markdown with Hugo syntax), OpenDocument, RESX, SRT files, images of JPG, PNG, SVG, BMP and GIF formats, scanned PDFs, audio and video files as well as plain text.
+[GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation/) is Cloud API to translate Word (including RTF and TXT files), Excel (including CSV / TSV files), PowerPoint, PDF, HTML, Markdown (including Markdown with Hugo syntax), OpenDocument, RESX, SRT files, images of JPG, PNG, SVG, BMP and GIF formats, scanned PDFs, audio and video files as well as plain text. Besides general vocabulary, it provides medical translation, slang translation, summarization translation, translation with respect to text tone and domain translation based on classification.
 
 For convenience of our Android customers, we introduce a simple SDK that assists to add translation of all document, image and media file formats mentioned above and plain text to your app with merely a few lines of code.
 
@@ -15,7 +15,6 @@ It is easy to get started with GroupDocs.Translation Cloud and there is nothing 
 ## Cloud Document Translation Features
 
 - Translation of Microsoft Word®, Microsoft Excel®, and Microsoft PowerPoint® documents
-- [46 languages and 164 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes/endnotes, image captions in Word documents and ODT files
 - Translation of cells, charts, tables, pivot tables in Excel documents and ODS files
 - Translation of text frames, tables, headers, footers, charts, comments in PowerPoint presentations and ODP files
@@ -30,10 +29,15 @@ It is easy to get started with GroupDocs.Translation Cloud and there is nothing 
 - Translation of handwritten text
 - Translation of audio files, including translation by providing a link
 - Translation of video files, including translation by providing a link
+- Slang translation
+- Medical translation
+- Summarization translation
+- Translation with the respect to text tone
+- Domain translation based on classification
 
 ## Supported Translation Formats
 
-You shoukd specify format of document to translate putting in the request’s body the appropriate enum value.
+You should specify format of document to translate putting in the request’s body the appropriate enum value.
 
 Additionally, user could obtain translated file in any other format available for conversion. Just specify output format of translated document by putting file extension in the request’s body:
 
@@ -125,8 +129,8 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 - **uk-ru / ru-uk** — to translate from Ukrainian to Russian or from Russian to Ukrainian
 - **es-ru / ru-es** — to translate from Spanish to Russian or from Russian to Spanish
 - **es-ar / ar-es** — to translate from Spanish to Arabic or from Arabic to Spanish
-- **ar-tr / tr-ar** — to translate from Arabic to Turkish or from Turkish to Arabic 
-- **ar-pl / pl-ar** — to translate from Arabic to Polish or from Polish to Arabic 
+- **ar-tr / tr-ar** — to translate from Arabic to Turkish or from Turkish to Arabic
+- **ar-pl / pl-ar** — to translate from Arabic to Polish or from Polish to Arabic
 - **ru-ar / ar-ru** — to translate from Russian to Arabic or from Arabic to Russian
 - **ru-af / af-ru** — to translate from Russian to Afrikaans or from Afrikaans to Russian
 
@@ -134,7 +138,7 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 
 You can put the following information in the requests body to translate a document:
 
-- **format** — format of file for translation 
+- **format** — format of file for translation
 - **outputFormat** — format of translated file (e.g. pdf)
 - **sourceLanguage** — language of original document (e.g. en)
 - **targetLanguages** — languages of translation as list (e.g. [fr, de])
@@ -144,7 +148,7 @@ You can put the following information in the requests body to translate a docume
 - **masters** — if masters slides should be translated (only for presentations, pass true or false)
 - **elements** — slide pages to translate (only for presentations, pass empty list to translate whole presentation)
 - **separator** — delimiter for CSV files
-- **ranges** - dictionary of ranges in Excel workbook 
+- **ranges** - dictionary of ranges in Excel workbook
 - **shortcodedict** — dictionary of short code syntax in Hugo to translate, where the key is zero based short code index, and value is a list of parameters names that require translation
 - **frontmatterdict** — dictionary of front matter syntax in Hugo to translate, where the key is zero based front matter index and value is list of paths to values that require translation, each path is also a list.
 
@@ -155,7 +159,6 @@ To translate plain text the following information should be put in the requests 
 - **texts** — list of texts to translate (e.g. [hello world])
 - **contains-markdown** — true if text contains markdown syntax
 
-
 ## How to use the SDK?
 
 Our API is completely independent of your operating system, database system, or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone, and time-consuming. Therefore, we have provided and support [SDKs](https://github.com/groupdocs-translation-cloud) in many development languages to make it easier for your Cloud Apps to integrate with us.
@@ -163,7 +166,6 @@ Our API is completely independent of your operating system, database system, or 
 ### Get API keys if you haven't
 
 Make a personal account on [GroupDocs Cloud Dashboard](https://dashboard.groupdocs.cloud/#/) and click _Get Keys_. These keys are useful for all GroupDocs Cloud products. If you have any trouble, look at this [detailed manual](https://docs.groupdocs.cloud/total/creating-and-managing-application/). Once your keys are received, please follow this [article](https://docs.groupdocs.cloud/translation/quickstart/) to try GroupDocs.Translation Cloud or familiarize with [Developer guide](https://docs.groupdocs.cloud/translation/developer-guide/) for further details.
-
 
 ## Requirements
 
@@ -194,8 +196,8 @@ Add this dependency to your project's POM:
 ```xml
 <dependency>
   <groupId>com.groupdocs</groupId>
-  <artifactId>GroupDocs-translation-cloud-Android</artifactId>
-  <version>24.12</version>
+  <artifactId>GroupDocs-translation-android-cloud</artifactId>
+  <version>25.7</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -211,7 +213,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.groupdocs:GroupDocs-translation-cloud-Android:24.12"
+     implementation "com.groupdocs:GroupDocs-translation-android-cloud:25.7"
   }
 ```
 
@@ -225,7 +227,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/GroupDocs-translation-cloud-Android-24.12.jar`
+* `target/GroupDocs-translation-android-cloud-25.7.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -233,9 +235,12 @@ Then manually install the following JARs:
 Please follow the [installation](#installation) instruction and execute the following Java code:
 
 ```java
-
-// Import classes:
-import com.groupdocs.model.*;
+ 
+import com.groupdocs.ApiClient;
+import com.groupdocs.ApiException;
+import com.groupdocs.Configuration;
+import com.groupdocs.auth.*;
+import com.groupdocs.models.*;
 import org.openapitools.client.api.TranslationApi;
 
 public class Example {
@@ -245,7 +250,9 @@ public class Example {
         String clientSecret = "YOUR_CLIENT_SECRET";
 
         ApiClient defaultClient = new ApiClient(basePath, cliendId, clientSecret, null);
+
         TranslationApi apiInstance = new TranslationApi(defaultClient);
+//        FileRequest fileRequest = new FileRequest(); // FileRequest | String in body of request, containing JSON with parameters for translation.
 
         TextRequest request = new TextRequest();
         request.setSourceLanguage("en");
@@ -256,7 +263,7 @@ public class Example {
             CloudTextResponse cloudTextResponse = apiInstance.textRequestIdGet(apiInstance.textPost(request).getId());
             System.out.println(cloudTextResponse);
         } catch (ApiException e) {
-            System.err.println("Exception when calling TranslationApi#textPost");
+            System.err.println("Exception when calling TranslationApi#autoPost");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -273,9 +280,11 @@ All URIs are relative to *https://api.groupdocs.cloud/v2.0/translation*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*FileApi* | [**fileUploadPost**](docs/FileApi.md#fileUploadPost) | **POST** /file/upload | 
-*SwaggerApi* | [**swaggerSpecGet**](docs/SwaggerApi.md#swaggerSpecGet) | **GET** /swagger/spec | 
+*FileApi* | [**fileUploadPost**](docs/FileApi.md#fileUploadPost) | **POST** /file/upload |
+*SwaggerApi* | [**swaggerSpecGet**](docs/SwaggerApi.md#swaggerSpecGet) | **GET** /swagger/spec |
+*TranslationApi* | [**autoClassificationPost**](docs/TranslationApi.md#autoClassificationPost) | **POST** /auto/classification | Domain Ttanslation of any supported file based on classification
 *TranslationApi* | [**autoPost**](docs/TranslationApi.md#autoPost) | **POST** /auto | Translate any supported file
+*TranslationApi* | [**autoSlangPost**](docs/TranslationApi.md#autoSlangPost) | **POST** /auto/slang | Slang translation of any supported file
 *TranslationApi* | [**csvPost**](docs/TranslationApi.md#csvPost) | **POST** /csv | Translate CSV and TSV files
 *TranslationApi* | [**documentPost**](docs/TranslationApi.md#documentPost) | **POST** /document | Translate Microsoft Word documents, rtf, txt, odt
 *TranslationApi* | [**documentRequestIdGet**](docs/TranslationApi.md#documentRequestIdGet) | **GET** /document/{requestId} | Return document translation status.  Also return URLs for downloading of translated document if translation was successful
@@ -297,8 +306,15 @@ Class | Method | HTTP request | Description
 *TranslationApi* | [**resxPost**](docs/TranslationApi.md#resxPost) | **POST** /resx | Translate Resx files
 *TranslationApi* | [**spreadsheetPost**](docs/TranslationApi.md#spreadsheetPost) | **POST** /spreadsheet | Translate Microsoft Excel workbooks, ods
 *TranslationApi* | [**srtPost**](docs/TranslationApi.md#srtPost) | **POST** /srt | Translate Srt files
+*TranslationApi* | [**summarizeDocumentPost**](docs/TranslationApi.md#summarizeDocumentPost) | **POST** /summarize-document | Summarize and translate document file
+*TranslationApi* | [**summarizeImagePost**](docs/TranslationApi.md#summarizeImagePost) | **POST** /summarize-image | Summarize and translate image or scanned pdf and return file
+*TranslationApi* | [**summarizeMediaPost**](docs/TranslationApi.md#summarizeMediaPost) | **POST** /summarize-media | Summarize audio or video, translate it  and return file as a result
+*TranslationApi* | [**summarizeTextPost**](docs/TranslationApi.md#summarizeTextPost) | **POST** /summarize-text | Summarize and translate text
+*TranslationApi* | [**textClassificationPost**](docs/TranslationApi.md#textClassificationPost) | **POST** /text/classification | Domain text translation based on classification
+*TranslationApi* | [**textMedicalPost**](docs/TranslationApi.md#textMedicalPost) | **POST** /text/medical | Translate medical
 *TranslationApi* | [**textPost**](docs/TranslationApi.md#textPost) | **POST** /text | Translate text
 *TranslationApi* | [**textRequestIdGet**](docs/TranslationApi.md#textRequestIdGet) | **GET** /text/{requestId} | Return text translation status.  Also return translated text if translation was successful
+*TranslationApi* | [**textSlangPost**](docs/TranslationApi.md#textSlangPost) | **POST** /text/slang | Translate slang
 *TranslationApi* | [**textTrialGet**](docs/TranslationApi.md#textTrialGet) | **GET** /text/trial | Return text translation status for trial requests.  Also return translated text if translation was successful
 *TranslationApi* | [**textTrialPost**](docs/TranslationApi.md#textTrialPost) | **POST** /text/trial | Trial translate text. Translate only 1000 symbols.
 *TranslationApi* | [**xmlPost**](docs/TranslationApi.md#xmlPost) | **POST** /xml | Translate XML files
@@ -306,36 +322,35 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [CloudFileRequest](docs/CloudFileRequest.md)
- - [CloudFileResponse](docs/CloudFileResponse.md)
- - [CloudFileResponseWithAdditionalInfo](docs/CloudFileResponseWithAdditionalInfo.md)
- - [CloudHugoResponse](docs/CloudHugoResponse.md)
- - [CloudTextResponse](docs/CloudTextResponse.md)
- - [CsvFileRequest](docs/CsvFileRequest.md)
- - [FileRequest](docs/FileRequest.md)
- - [HealthCheckEntity](docs/HealthCheckEntity.md)
- - [HealthCheckStatus](docs/HealthCheckStatus.md)
- - [HtmlFileRequest](docs/HtmlFileRequest.md)
- - [HttpStatusCode](docs/HttpStatusCode.md)
- - [HugoRequest](docs/HugoRequest.md)
- - [ImageToFileRequest](docs/ImageToFileRequest.md)
- - [ImageToTextRequest](docs/ImageToTextRequest.md)
- - [LanguagePairData](docs/LanguagePairData.md)
- - [MarkdownFileRequest](docs/MarkdownFileRequest.md)
- - [MediaToFileRequest](docs/MediaToFileRequest.md)
- - [MediaToTextRequest](docs/MediaToTextRequest.md)
- - [PdfFileRequest](docs/PdfFileRequest.md)
- - [PresentationFileRequest](docs/PresentationFileRequest.md)
- - [SpreadsheetFileRequest](docs/SpreadsheetFileRequest.md)
- - [SrtFileRequest](docs/SrtFileRequest.md)
- - [StatusResponse](docs/StatusResponse.md)
- - [StringStringTuple](docs/StringStringTuple.md)
- - [TextDocumentFileRequest](docs/TextDocumentFileRequest.md)
- - [TextRequest](docs/TextRequest.md)
- - [UrlFileInfo](docs/UrlFileInfo.md)
- - [WorksheetData](docs/WorksheetData.md)
- - [XmlFileRequest](docs/XmlFileRequest.md)
-
+- [CloudFileRequest](docs/CloudFileRequest.md)
+- [CloudFileResponse](docs/CloudFileResponse.md)
+- [CloudFileResponseWithAdditionalInfo](docs/CloudFileResponseWithAdditionalInfo.md)
+- [CloudHugoResponse](docs/CloudHugoResponse.md)
+- [CloudTextResponse](docs/CloudTextResponse.md)
+- [CsvFileRequest](docs/CsvFileRequest.md)
+- [FileRequest](docs/FileRequest.md)
+- [HealthCheckEntity](docs/HealthCheckEntity.md)
+- [HealthCheckStatus](docs/HealthCheckStatus.md)
+- [HtmlFileRequest](docs/HtmlFileRequest.md)
+- [HttpStatusCode](docs/HttpStatusCode.md)
+- [HugoRequest](docs/HugoRequest.md)
+- [ImageToFileRequest](docs/ImageToFileRequest.md)
+- [ImageToTextRequest](docs/ImageToTextRequest.md)
+- [LanguagePairData](docs/LanguagePairData.md)
+- [MarkdownFileRequest](docs/MarkdownFileRequest.md)
+- [MediaToFileRequest](docs/MediaToFileRequest.md)
+- [MediaToTextRequest](docs/MediaToTextRequest.md)
+- [PdfFileRequest](docs/PdfFileRequest.md)
+- [PresentationFileRequest](docs/PresentationFileRequest.md)
+- [SpreadsheetFileRequest](docs/SpreadsheetFileRequest.md)
+- [SrtFileRequest](docs/SrtFileRequest.md)
+- [StatusResponse](docs/StatusResponse.md)
+- [StringStringTuple](docs/StringStringTuple.md)
+- [TextDocumentFileRequest](docs/TextDocumentFileRequest.md)
+- [TextRequest](docs/TextRequest.md)
+- [UrlFileInfo](docs/UrlFileInfo.md)
+- [WorksheetData](docs/WorksheetData.md)
+- [XmlFileRequest](docs/XmlFileRequest.md)
 
 ## GroupDocs.Translation Cloud SDKs in Popular Languages
 
@@ -344,4 +359,6 @@ Class | Method | HTTP request | Description
 | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-dotnet) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-java) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-android) |
 | [NuGet](https://www.nuget.org/packages/GroupDocs.translation-Cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-translation-cloud) | [PIP](https://pypi.org/project/groupdocs-translation-cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-translation-cloud-android) |
 
-[Product Page](https://products.groupdocs.cloud/translation/android/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://reference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-android) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
+[Product Page](https://products.groupdocs.cloud/translation/java/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://apireference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-java) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
+
+

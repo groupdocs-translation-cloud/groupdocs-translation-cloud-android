@@ -11,7 +11,9 @@ Request for files with textual content (doc, docx, docm, rtf, odt, txt
 |**sourceLanguage** | **String** | Language of original file |  |
 |**targetLanguages** | **List&lt;String&gt;** | List of target languages |  |
 |**originalFileName** | **String** | Type in the file name. If null will be as request ID. |  [optional] |
-|**url** | **String** | Link to file for translation. Ignore, if \&quot;file\&quot; property not null |  [optional] |
+|**url** | **String** | Link to file for translation. Ignore, if \&quot;file\&quot; property not null |  |
+|**isNeedAlignment** | **Boolean** | Do result formating like the source. This option needs more expensive requests. |  [optional] |
+|**translationDictionary** | **Map&lt;String, String&gt;** | Set a specific translation between source and target words. |  [optional] |
 |**savingMode** | [**SavingModeEnum**](#SavingModeEnum) | Toggle file saving mode for storage.  Is Files by default. |  [optional] |
 |**format** | [**FormatEnum**](#FormatEnum) | Input file format |  |
 |**outputFormat** | **String** | output file format |  |

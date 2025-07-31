@@ -2,11 +2,11 @@ lazy val root = (project in file(".")).
   settings(
     organization := "com.groupdocs",
     name := "GroupDocs-translation-cloud-Android",
-    version := "25.2",
-    scalaVersion := "2.11.4",
+    version := "25.7",
+    scalaVersion := "2.11.12",
     scalacOptions ++= Seq("-feature"),
-    javacOptions in compile ++= Seq("-Xlint:deprecation"),
-    publishArtifact in (Compile, packageDoc) := false,
+    compile / javacOptions ++= Seq("-Xlint:deprecation"),
+    Compile / packageDoc / publishArtifact := false,
     resolvers += Resolver.mavenLocal,
     libraryDependencies ++= Seq(
       "io.swagger" % "swagger-annotations" % "1.6.5",

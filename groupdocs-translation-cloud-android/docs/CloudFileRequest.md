@@ -16,6 +16,8 @@
 |**size** | **Long** | File size |  [optional] |
 |**masters** | **Boolean** | If translate master slides |  [optional] |
 |**formatting** | **Boolean** | If document&#39;s formatting should be preserved, default true |  [optional] |
+|**isNeedAlignment** | **Boolean** | If need result like source formated text. |  [optional] |
+|**translationDictionary** | **Map&lt;String, String&gt;** | Set a specific translation between source and target words. |  [optional] |
 |**origin** | **String** | for analysis only |  [optional] |
 |**elements** | **List&lt;Integer&gt;** | List of slides to translate |  [optional] |
 |**ranges** | [**Map&lt;String, WorksheetData&gt;**](WorksheetData.md) | Dictionary of ranges in Excel workbooks |  [optional] |
@@ -26,6 +28,7 @@
 |**isPaid** | **Boolean** | Set true if paid user |  [optional] |
 |**savingMode** | [**SavingModeEnum**](#SavingModeEnum) | Toggle files saving mode |  [optional] |
 |**details** | **Map&lt;String, String&gt;** | Details of the requests. Using for e2e tracking |  [optional] |
+|**model** | [**ModelEnum**](#ModelEnum) | Text array to translate |  [optional] |
 
 
 
@@ -36,6 +39,16 @@
 | FILES | &quot;Files&quot; |
 | ARCHIVE | &quot;Archive&quot; |
 | BOTH | &quot;Both&quot; |
+
+
+
+## Enum: ModelEnum
+
+| Name | Value |
+|---- | -----|
+| GENERAL | &quot;General&quot; |
+| SLANG | &quot;Slang&quot; |
+| CLASSIFICATION | &quot;Classification&quot; |
 
 
 
